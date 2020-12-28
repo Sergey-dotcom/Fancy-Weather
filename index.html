@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" type="images/x-icon" />
+    <title>Fancy Weather</title>
+    <link href="assets/style/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="control-unit">
+      <div class="control-unit__buttons">
+        <button class="button control-unit__button-update">
+          <div class="control-unit__spinner"></div>
+        </button>
+        <div class="control-unit__language-menu">
+          <button class="button control-unit__language-menu__button">
+            <span id="current-language">en</span>
+            <span class="button__arrow-down"></span>
+          </button>
+          <div class="control-unit__down-menu">
+            <button class="control-unit__down-menu__item button" id="en">
+              en
+            </button>
+            <button
+              class="control-unit__down-menu__item button inactive"
+              id="ru"
+            >
+              ru
+            </button>
+            <button
+              class="control-unit__down-menu__item button inactive"
+              id="be"
+            >
+              be
+            </button>
+          </div>
+        </div>
+        <button class="button control-unit__buttons-f inactive">°F</button>
+        <button class="button control-unit__buttons-c">°C</button>
+      </div>
+      <div class="control-unit__search-input">
+        <input
+          class="control-unit__search-input-input"
+          type="search"
+          name="search-city"
+          required=""
+          placeholder="Search city or ZIP"
+        />
+        <button class="button control-unit__search-input__button">
+          Search
+        </button>
+        <button class="control-unit__search-input__voice-button off"></button>
+      </div>
+    </div>
+    <main>
+      <div class="weather-data-cluster">
+        <p class="weather-data-cluster__location"></p>
+        <p class="weather-data-cluster__date-time">
+          <span class="weather-data-cluster__clock"></span>
+        </p>
+        <p
+          class="weather-data-cluster__temperature-today"
+          id="temperature-today"
+        ></p>
+        <img class="weather-data-cluster__weather-icon" alt="" src="" />
+        <div class="weather-data-cluster__weather-data">
+          <p id="descriptionWeather"></p>
+          <p>
+            <span id="apparentTemperature">Feels like:</span>
+            <span id="degreesValueApparent"></span>
+          </p>
+          <p>
+            <span id="windSpeed">Wind Speed:</span>
+            <span id="valueSpeed"></span>
+          </p>
+          <p>
+            <span id="airHumidity">Humidity:</span>
+            <span id="valueHumidity"></span>
+          </p>
+        </div>
+        <div class="forecast" id="tomorrow">
+          <p class="forecast__day"></p>
+          <p class="forecast__temperature"></p>
+          <img class="forecast__icon" alt="" src="" />
+        </div>
+        <div class="forecast" id="day-after-tomorrow">
+          <p class="forecast__day"></p>
+          <p class="forecast__temperature"></p>
+          <img class="forecast__icon" alt="" src="" />
+        </div>
+        <div class="forecast" id="next-day">
+          <p class="forecast__day"></p>
+          <p class="forecast__temperature"></p>
+          <img class="forecast__icon" alt="" src="" />
+        </div>
+      </div>
+      <div class="map-cluster">
+        <div class="map-cluster__map">
+          <iframe class="map-iframe" src=""></iframe>
+        </div>
+        <div class="map-cluster__coordinates">
+          <p id="latitude"></p>
+          <p id="longitude"></p>
+        </div>
+      </div>
+    </main>
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
