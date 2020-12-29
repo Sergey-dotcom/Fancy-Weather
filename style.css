@@ -317,3 +317,155 @@ main {
   width: 6.7rem;
   height: 6.7rem;
 }
+
+/* MAP CLUSTER */
+
+.map-cluster__map {
+  width: 37.5rem;
+  height: 37.5rem;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.map-iframe {
+  width: 200%;
+  height: 200%;
+  -webkit-transform: translate(-25%, -25%);
+  transform: translate(-25%, -25%);
+  border: 0;
+  border-radius: 5%;
+}
+
+.map-cluster__coordinates {
+  margin-top: 2rem;
+  font-size: 2.2rem;
+  text-align: right;
+}
+
+/* @KEYFRAMES */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  80% {
+    -webkit-transform: rotate(400deg);
+    transform: rotate(400deg);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  80% {
+    -webkit-transform: rotate(400deg);
+    transform: rotate(400deg);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes smoothAppearance {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes smoothAppearance {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* MEDIA */
+
+@media (max-width: 75.8em) {
+  html {
+    font-size: 56.25%;
+  }
+  main {
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+  .map-cluster {
+    margin-top: 10rem;
+  }
+  .map-cluster__coordinates {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+  .weather-data-cluster__date-time,
+  .weather-data-cluster__location {
+    text-align: center;
+  }
+  .weather-data-cluster__weather-data,
+  .weather-data-cluster__weather-icon {
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+  }
+  .forecast {
+    margin: 0 2.5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .weather-data-cluster {
+    grid-template-columns: repeat(3, 10rem);
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+  .weather-data-cluster__temperature-today {
+    grid-column: 1/4;
+    font-size: 18rem;
+  }
+  .weather-data-cluster__weather-icon {
+    grid-column: 1/4;
+    margin: 0 auto;
+  }
+  .weather-data-cluster__temperature-icon {
+    width: 20rem;
+    height: 20rem;
+    left: -9rem;
+    top: 2rem;
+  }
+  .control-unit__buttons {
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+    margin: 4rem 5rem 0;
+  }
+  .control-unit {
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+  .forecast {
+    margin-top: 4rem;
+  }
+  .forecast,
+  .weather-data-cluster__weather-data {
+    grid-column: 1/4;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
