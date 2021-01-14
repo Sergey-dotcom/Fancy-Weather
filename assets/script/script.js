@@ -277,6 +277,9 @@ DOWN_MENU.addEventListener('click', (event) => {
     
     getMap();
     getWeatherData(units, loc);
+     LANGUAGE_MENU_BTN.classList.remove('control-unit__language-menu__button-open');
+    ARROW_BTN.classList.remove('button__arrow-down-open');
+    DOWN_MENU.classList.remove('control-unit__down-menu-open');
 });
 
 F_BTN.addEventListener('click', () => {
