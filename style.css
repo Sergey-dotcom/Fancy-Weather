@@ -17,8 +17,8 @@ img {
 body {
     position: relative;
     height: 100vh;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 15, 26, .59)), to(rgba(17, 17, 46, .46))) 50% fixed, url(../img/bg-default.jpg) no-repeat 50% fixed;
-    background: linear-gradient(180deg, rgba(8, 15, 26, .59), rgba(17, 17, 46, .46)) 50% fixed, url(../img/bg-default.jpg) no-repeat 50% fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 15, 26, .59)), to(rgba(17, 17, 46, .46))) 50% fixed, url(/assets/img/bg-default.jpg) no-repeat 50% fixed;
+    background: linear-gradient(180deg, rgba(8, 15, 26, .59), rgba(17, 17, 46, .46)) 50% fixed, url(/assets/img/bg-default.jpg) no-repeat 50% fixed;
     background-size: cover;
     -webkit-animation: smoothAppearance 2s ease-in-out;
     animation: smoothAppearance 2s ease-in-out;
@@ -86,14 +86,14 @@ button, input {
 }
 
 .control-unit__button-update {
-    background: rgba(180, 184, 187, .7) url(../img/update-button.svg) no-repeat bottom;
+    background: rgba(180, 184, 187, .7) url(/assets/img/update-button.svg) no-repeat bottom;
     background-size: 4.4rem;
 }
 
 .control-unit__spinner {
     width: 2rem;
     height: 2rem;
-    background: url(../img/spinner.svg) 50% no-repeat;
+    background: url(/assets/img/spinner.svg) 50% no-repeat;
     -webkit-animation: spin 1.4s ease-in-out;
     animation: spinner 1.4s ease-in-out;
 }
@@ -115,7 +115,7 @@ button, input {
     width: 1.3rem;
     height: 1.3rem;
     margin-left: 1rem;
-    background: url(../img/arrow-down.svg) 50% no-repeat;
+    background: url(/assets/img/arrow-down.svg) 50% no-repeat;
 }
 
 .button__arrow-down-open {
@@ -225,7 +225,7 @@ input:focus:-ms-input-placeholder {
     right: 10.5rem;
     width: 3rem;
     height: 4rem;
-    background: url(../img/microphone.svg) 50% no-repeat;
+    background: url(/assets/img/microphone.svg) 50% no-repeat;
     background-size: 50%;
 }
 
@@ -254,7 +254,7 @@ main {
 
 .weather-data-cluster {
     display: grid;
-    grid-template-columns: 22rem 22rem 25rem;
+    grid-template-columns: 24rem 25rem 25rem;
     ;
     text-transform: uppercase;
     font-weight: 700;
@@ -278,14 +278,14 @@ main {
     grid-column: 1/3;
     grid-row: 3/5;
     text-align: center;
-    font-size: 30.6rem;
+    font-size: 30rem;
 }
 
 .weather-data-cluster__temperature-icon {
     position: absolute;
     left: -16rem;
     top: 6rem;
-    width: 30rem;
+    width: 29rem;
     height: 30rem;
 }
 
