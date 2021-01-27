@@ -313,7 +313,19 @@ async function getLinkToImage() {
     const url = 'https://api.unsplash.com/photos/random?orientation=landscape&per_page=1&query=nature&client_id=y-OZPdmYyHaAXKLEaoMl0TluPwVG_eSQSNLjgMwJnRc';
     const res = await fetch(url);
     const data = await res.json();
-    document.querySelector('body').style = `background: linear-gradient(180deg, rgba(8,15,26,.59), rgba(17,17,46,.46)) 50% fixed, url(${data.urls.regular}) no-repeat 50% fixed; background-size: cover`;
+	const bgContainer = document.getElementById('background-container');
+	
+	const imgToWait = new Image();
+		imgToWait.src = data.urls.regular;
+		imgToWait.onload = () => {
+			bgContainer.classList.add('backround-container-change');
+			
+			setTimeout(function () {
+				bgContainer.style = `background: linear-gradient(180deg, rgba(8,15,26,.59), rgba(17,17,46,.46)) 50% fixed, url(${data.urls.regular}) no-repeat 50% fixed; background-size: cover`;
+				bgContainer.classList.remove('backround-container-change');
+			}, 500)
+			delete imgToWait;
+		};
 };
 
 async function getUserGeolocation() {
