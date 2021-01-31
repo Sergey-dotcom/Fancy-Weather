@@ -40,14 +40,14 @@ body {
         to(rgba(17, 17, 46, 0.46))
       )
       50% fixed,
-    url(/assets/img/bg-default.jpg) no-repeat 50% fixed;
+    url(./assets/img/bg-default.jpg) no-repeat 50% fixed;
   background: linear-gradient(
         180deg,
         rgba(8, 15, 26, 0.59),
         rgba(17, 17, 46, 0.46)
       )
       50% fixed,
-    url(/assets/img/bg-default.jpg) no-repeat 50% fixed;
+    url(./assets/img/bg-default.jpg) no-repeat 50% fixed;
   background-size: cover;
   transition: opacity 0.5s;
   opacity: 1;
@@ -118,7 +118,7 @@ input {
 }
 
 .control-unit__button-update {
-  background: rgba(180, 184, 187, 0.7) url(/assets/img/update-button.svg)
+  background: rgba(180, 184, 187, 0.7) url(./assets/img/update-button.svg)
     no-repeat bottom;
   background-size: 4.4rem;
 }
@@ -126,7 +126,7 @@ input {
 .control-unit__spinner {
   width: 2rem;
   height: 2rem;
-  background: url(/assets/img/spinner.svg) 50% no-repeat;
+  background: url(./assets/img/spinner.svg) 50% no-repeat;
   -webkit-animation: spin 1.4s ease-in-out;
   animation: spinner 1.4s ease-in-out;
 }
@@ -148,7 +148,7 @@ input {
   width: 1.3rem;
   height: 1.3rem;
   margin-left: 1rem;
-  background: url(/assets/img/arrow-down.svg) 50% no-repeat;
+  background: url(./assets/img/arrow-down.svg) 50% no-repeat;
 }
 
 .button__arrow-down-open {
@@ -261,7 +261,7 @@ input:focus:-ms-input-placeholder {
   right: 10.5rem;
   width: 3rem;
   height: 4rem;
-  background: url(/assets/img/microphone.svg) 50% no-repeat;
+  background: url(./assets/img/microphone.svg) 50% no-repeat;
   background-size: 50%;
 }
 
