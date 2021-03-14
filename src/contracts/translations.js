@@ -1,0 +1,57 @@
+export const translations = {
+  en: {
+    searchInput: 'Search city or ZIP',
+    searchButton: 'search',
+    apparentTemperature: 'feels like:',
+    windSpeed: 'wind speed:',
+    airHumidity: 'Humidity:',
+    latLabel: 'Latitude',
+    lonLabel: 'Longitude',
+  },
+  ru: {
+    searchInput: 'Найти город или индекс',
+    searchButton: 'поиск',
+    apparentTemperature: 'ощущается как:',
+    windSpeed: 'скорость ветра:',
+    airHumidity: 'влажность:',
+    latLabel: 'Широта',
+    lonLabel: 'Долгота',
+  },
+
+  be: {
+    searchInput: 'Знайсці горад ці індэкс',
+    searchButton: 'пошук',
+    apparentTemperature: 'адчуваецца як:',
+    windSpeed: 'хуткасць ветру:',
+    airHumidity: 'вільготнасць:',
+    latLabel: 'Шырата',
+    lonLabel: 'Даўгата',
+    days: {
+      long: [
+        'нядзеля',
+        'панядзелак',
+        'аўторак',
+        'серада',
+        'чацвер',
+        'пятніца',
+        'субота',
+      ],
+      short: ['няд', 'пнд', 'аўт', 'сер', 'чцв', 'пят', 'суб'],
+    },
+
+    month: [
+      'Студзень',
+      'Люты',
+      'Сакавiк',
+      'Красавiк',
+      'Май',
+      'Чэрвень',
+      'Лiпень',
+      'Жнiвень',
+      'Верасень',
+      'Кастрычнiк',
+      'Лiстапад',
+      'Снежань',
+    ],
+  },
+};

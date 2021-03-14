@@ -1,0 +1,17 @@
+{
+  "name": "fancy-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Sergey Ovsyannikov",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
