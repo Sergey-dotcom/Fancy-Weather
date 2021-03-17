@@ -1,4 +1,5 @@
 import { getApiData, getCurrentLocale } from '~/services';
+import { STORED_TIMEZONE } from '~/contracts/globals';
 
 const DAILY_DATA_LIMIT = 4;
 const DEFAULT_UNITS = 'M';
@@ -21,7 +22,7 @@ const getDailyWeather = ({ lat, lon }) => new Promise((resolve, reject) => {
 
 const getCityName = ({ lat, lon }) => new Promise((resolve, reject) => {
   const { language } = getCurrentLocale();
-  getApiData(`https://api.opencagedata.com/geocode/v1/json?q=${lat},${lon}&key=461a5319b8ab435dadb02959bf0bc967&language=${language}&pretty=1&no_annotations=1&abbrv=1`)
+  getApiData(`https://api.opencagedata.com/geocode/v1/json?q=${lat},${lon}&key=461a5319b8ab435dadb02959bf0bc967&language=${language}&pretty=1&abbrv=1`)
     .then((data) => {
       let cityName = '';
       let countryName = '';
@@ -29,7 +30,11 @@ const getCityName = ({ lat, lon }) => new Promise((resolve, reject) => {
         const {village, town, city, country} = data.results[0].components;
         cityName = city || town || village;
         countryName = country;
+        const { timezone } = data.results[0].annotations;
+        
+        localStorage.setItem(STORED_TIMEZONE, timezone.name);
       }
+      
       resolve(`${cityName}, ${countryName}`);
     })
     .catch((e) => reject(e));
